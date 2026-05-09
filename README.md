@@ -2,7 +2,22 @@
 https://hatatori.github.io/zodiaco-chines.github.io/.
 
 ```js
-const animals = [
+const namesBr = [
+    "rato",
+    "boi",
+    "tigre",
+    "coelho",
+    "dragão",
+    "cobra",
+    "cavalo",
+    "cabra",
+    "macaco",
+    "galo",
+    "cachorro",
+    "porco"
+]
+
+const namesEn = [
     "rat",
     "ox",
     "tiger",
@@ -15,7 +30,7 @@ const animals = [
     "rooster",
     "dog",
     "pig"
-];
+]
 ```
 
 ```json
