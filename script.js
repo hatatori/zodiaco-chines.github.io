@@ -99,15 +99,15 @@ const json = [
 // https://hatatori.github.io/zodiaco-chines.github.io/animals/pig.png
 
 function descobrir() {
-    const numero = inp_numero.value
-    const position = (inp_numero.value - 1) % 12
+    if (inp_numero.value == undefined) return
+    const numero = inp_numero.value - 4
+    const position = Math.abs(numero % 12   )
     const animal_name = json[position].name
     const descricao = json[position].text
     tag_image.src = `./animals/${animal_name}.png`
-    tag_descricao.innerHTML = descricao
-    tag_nomeSigno.innerHTML = nomesBr[position] 
+    tag_descricao.innerHTML = "<h2>Descrição</h2>"+descricao
+    tag_nomeSigno.innerHTML = nomesBr[position]
 }
 
 inp_numero.addEventListener("keyup", descobrir)
-
-descobrir()
+ 
