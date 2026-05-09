@@ -1,79 +1,60 @@
-<style>
-	body{ text-align: center; font-family: monospace;font-size: 16}
-	#txt{display: none}
-	input{padding: 10;outline: none;margin: 10}
-	#relato{padding: 10;max-width: 500;margin: auto;}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultado - Cabra</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <main class="card">
+        <section class="card-header">
+            <h1 id="nomeSigno"></h1>
+            <p>Descubra o seu signo no horóscopo chinês</p>
+        </section>
+
+        <section class="content">
+            <div style="margin-bottom: 28px; text-align: left; margin-top: 10px">
 
 
-</style>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=no">
-<div id="cont">
-	<input id="year" autofocus="" placeholder="Ano de nascimento"><br>
-	<img id="result" src=''>
-	<p id="nome"></p>
-	<hr>
-	<div id="relato"></div>
-		
-</div>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <input type="number" id="numero" placeholder="Ano de nascimento (1997)" style="
+              flex:1;
+              min-width:180px;
+              padding:14px 18px;
+              border-radius:16px;
+              border:2px solid #fecaca;
+              outline:none;
+              font-size:1rem;
+              transition:0.2s;
+            " />
 
-<div id="txt">
-	<p id="rato">Você é descontraída e alegre. É muito sociável e gosta de estar sempre com os amigos e familiares, mas não dispensa momentos de privacidade com a pessoa amada. Você tem muita garra e força para lutar pelos sonhos e objetivos que deseja alcançar, mas nunca se esquece de ajudar as pessoas que gosta. A liberdade e alegria de viver são características marcantes de sua personalidade. Não gosta nem um pouco de se sentir presa. Para você, a sensação de liberdade no trabalho com os amigos, com a família e, principalmente, na vida amorosa, é importante para um relacionamento harmônico e feliz.</p>
-	<p id="touro">A calma e o bom senso estão sempre presentes em sua vida. Para você, quase não tem tempo ruim, procura estar sempre de bem com a vida. Confia muito em sua capacidade de superar os obstáculos, principalmente no trabalho e no setor financeiro. É muito observadora, fica atenta a tudo o que acontece ao seu redor, mas prefere não revelar a ninguém seus segredos mais íntimos. É cautelosa e antes de tomar suas decisões pensa sempre nos prós e nos contras de cada situação. Por isso, dificilmente alguma coisa acontece diferente do que planejou. A timidez é marcante em sua personalidade e às vezes pode acabar atrapalhando alguns de seus projetos.</p>
-	<p id="tigre">
-		Você está sempre disposta a ajudar o próximo. Dona de um grande coração, ajuda as pessoas sem intenção de pedir nada em troca. Nos momentos de descontração, gosta de estar junto dos amigos para trocar idéias e confidências. Não costuma guardar segredos sobre suas coisas. Antes de tomar alguma decisão importante, prefere ouvir as pessoas mais próximas, para evitar situações indesejavéis. É bem-humorada e comunicativa e, por isso, tem facilidade de fazer novos amigos. Está sempre à procura de coisas novas. Muito curiosa, adora desvendar mistérios e conhecer novos lugares. Tem um magnetismo pessoal que encanta a todos que fazem parte de sua vida.
-	</p>
-	<p id="coelho">
-		A discrição e a prudência são marcantes em sua vida. Você é muito prestativa. Está sempre pronta para ajudar as pessoas em todas as situações. É muito curiosa, está sempre atrás de novidades. Para você, é importante conhecer coisas novas e diferentes. Gosta de estar por dentro de tudo, para poder discutir e argumentar sobre os mais diversos assuntos. Com os amigos é reservada. Prefere um bate-papo descontraído, mas mantém segredo de seus assuntos particulares. Tímida e discreta, fica inibida quando comentam algo sobre sua vida pessoal. Romântica e sensível, você procura sempre um parceiro sincero e compreensivo. Quando é magoada e machucada pode se tornar uma fera. Não deixa de lado o sonho de encontrar a paz interior e a felicidade em sua vida.
-	</p>
-	<p id="dragao">
-		Você é muito corajosa e cheia de vida. Enfrenta todas as situações com a maior disposição e força de vontade. Você não se deixa abater por nada, luta sempre pelos seus sonhos. Procura estar no comando das coisas e não gosta de ser criticada, principalmente nos assuntos relacionados ao setor profissional. Por isso, prefere guardar segredos de trabalho para evitar discussões desnecessárias e desgastantes. Tem um grande magnetismo que desperta ainda mais sua vontade de vencer e de lutar para alcançar seus desejos e objetivos. Para você, o poder e a liderança são importantes para manter um relacionamento equilibrado com as pessoas que vivem ao seu redor. Mas é bom que você contenha um pouco a vontade de comandar, para evitar atritos com os amigos e familiares.
-	</p>
-	<p id="serpente">
-		Você tem um mistério que fascina e encanta a todos. É difícil adivinhar seus desejos e sonhos mais íntimos. Mas às vezes, tem necessidade de confidenciar seus segredos para os amigos e pessoas mais próximas. É bom conter um pouco esta tendência para que não revele demais sua vida pessoal, pois tem uma certa ingenuidade que leva você a confiar demais em pessoas erradas. Você é muito ligada a coisas materiais, é charmosa e elegante. A segurança e o conforto são fundamentais, por isso tem forte tendência a gostar de coisas luxuosas e caras. Você é observadora e persistente, sempre luta com muita garra e força para alcançar seus objetivos. No amor, procura uma pessoa sincera e verdadeira, para que possa compartilhar os bons e os maus momentos de sua vida.
-	</p>
-	<p id="cavalo">
-		Você é muito comunicativa e descontraída, por isso, tem facilidade de conhecer pessoas. É um pouco teimosa e segue sempre sua intuição. Gosta de curtir a noite e de badalar com os amigos. É muito curiosa. Para você a cultura é importante, está sempre atrás de novidades. Adora viajar, conhecer novos lugares e fazer muitos amigos. Você não gosta de se sentir presa; busca a liberdade acima de tudo. É muito reservada e dificilmente demonstra o que está sentindo. Seu maior desejo é encontrar uma pessoa inteligente e culta que acompanhe sua sede de sabedoria. Você é uma pessoa muito discreta, não gosta de expor suas impressões e opiniões, prefere guardá-las só para si.
-	</p>
-	<p id="cabra">
-		Muito romântica e sonhadora, você procura sempre a harmonia com os amigos e com os familiares. Luta sempre por um mundo mais justo e belo, que não tenha desigualdades e sofrimentos. Por outro lado, sua fragilidade, às vezes, atrapalha esse sonho, pois ela pode acabar impedindo que você batalhe por seus objetivos e desejos. Muito comunicativa, gosta de compartilhar seus projetos e segredos com outras pessoas. Adora falar de si, de seus amigos e familiares. Quando tem uma certa intimidade e contato com alguém, expõe toda a sua vida e até a de seus familiares, sem maiores pudores. No setor profissional, prefere ser discreta e não revelar suas ambições para os colegas de trabalho.
-	</p>
-	<p id="macaco">
-		Muito otimista e alegre, você procura ver o lado bom das coisas. Tem uma alegria contagiante e está sempre de bem com a vida. Não deixa se abater por nada. Muito ambiciosa e segura, sabe aonde quer chegar. Não mede esforços para realizar seus sonhos e objetivos. Luta com muita garra e disposição para conseguir alcançar todas as coisas boas que a vida pode trazer,como saúde, amigos, felicidade e prosperidade. Muito amiga e companheira, prefere ouvir a opinião dos mais próximos antes de tomar alguma decisão importante. Às vezes é impulsiva e acaba revelando seus segredos, o que pode acabar prejudicando seus projetos e desejos mais íntimos. É bom conter um pouco essa tendência para evitar aborrecimentos e discussões desnecessárias.
-	</p>
-	<p id="galo">
-		Você procura sempre realizar tudo o que se propõe a fazer. Não desiste fácil de seus planos e projetos de vida. Age com muita cautela e cuidado para que as coisas sejam organizadas com a máxima perfeição. Gosta de comandar e de liderar as situações. Não dispensa um bate-papo descontraído e informal com os amigos mais próximos. Quando tem um conflito amoroso, prefere se abrir com as pessoas em quem confia para desabafar seus problemas afetivos. Para você, antes de tudo, a saúde é muito importante. Além disso, busca uma vida organizada e rotineira, sem maiores complicações. Você tem muita garra e força de vontade. Está sempre disposta a lutar para alcançar a felicidade e a harmonia em sua vida e de seus familiares.
-	</p>
-	<p id="cachorro">
-		Você gosta de ajudar as pessoas. Está sempre disposta a auxiliar o próximo no que for possível, e às vezes até esquece de si mesma. É preciso ter muita cautela para não deixar que as opiniões dos outros acabem interferindo em sua vida. Se você fizer isso e ficar mais atenta à sua vida pessoal, pode evitar complicações e situações embaraçosas. Você busca sempre amizades sinceras e verdadeiras, para que possa encontrar o apoio dos amigos e uma força extra para lutar por seus sonhos. Além de todo esse apoio, você procura ainda alguém para compartilhar seus problemas e segredos mais íntimos. Romântica e sensível, você quer um grande amor para viver ao seu lado o resto de seus dias.
-	</p>
-	<p id="porco">
-		Romântica e sensível, sempre que tem um tempinho, foge da realidade e se abriga em um mundo de fantasias e sonhos, que é só seu. Tem muita garra e energia para correr atrás de seus objetivos e desejos. Não mede esforços para realizar seus planos. A discrição também é característica marcante em sua personalidade. Você age sempre com muita cautela e prudência, para evitar que as pessoas façam comentários sobre sua vida pessoal. É muito reservada, não gosta que ninguém interfira e dê palpites em assuntos que só dizem respeito a você. Mesmo que apresentem soluções positivas para seus problemas, você prefere resolvê-los à sua maneira. Gosta de estar sempre em evidência, para que possa se destacar entre as outras pessoas.
+                    <button class="btn btn-primary" onclick="descobrir()">
+                        Descobrir
+                    </button>
+                </div>
+            </div>
+
+            <div class="conteudo">
+                <div class="image-wrap">
+                    <img id="imagemSigno" />
+                </div>
+
+                <div>
+                    <h2>Descrição</h2>
+
+                    <p id="descricao"> </p>
+                </div>
+            </div>
 
 
-	</p>
-
-</div>
-
-<script>
-
-	function signo(ano){
-
-	animal = ["rato","touro","tigre","coelho","dragao","serpente","cavalo","cabra","macaco","galo","cachorro","porco"]
-
-		return animal[(ano+8)%12]
-	}
+        </section>
+    </main>
 
 
-	year.onkeyup=function(e){
-		if(this.value.length > 0){
-			k = signo(parseInt(this.value))
-			result.src = "animals/"+k+".PNG"
-			nome.innerHTML=k
+</body>
 
-			relato.innerHTML = txt.children[k].innerHTML
-		}
-	}
-	
-
-</script>
+</html>
