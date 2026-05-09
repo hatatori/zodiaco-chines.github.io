@@ -1,6 +1,15 @@
 # Zodiaco Chines
+
+## Link
 https://hatatori.github.io/zodiaco-chines.github.io/.
 
+## Imagem
+![Pig](https://hatatori.github.io/zodiaco-chines.github.io/animals/dragon.png)
+<br>
+
+https://hatatori.github.io/zodiaco-chines.github.io/animals/dragon.png
+
+## Array PT-BR
 ```js
 const namesBr = [
     "rato",
@@ -16,7 +25,10 @@ const namesBr = [
     "cachorro",
     "porco"
 ]
+```
 
+## Array EN-EN
+```js
 const namesEn = [
     "rat",
     "ox",
@@ -33,6 +45,7 @@ const namesEn = [
 ]
 ```
 
+## Full Array
 ```json
 [
   {
@@ -98,4 +111,4 @@ const namesEn = [
 ]
 ```
 
-https://hatatori.github.io/zodiaco-chines.github.io/animals/pig.png
+
